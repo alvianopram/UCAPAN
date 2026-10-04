@@ -1,0 +1,393 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background: linear-gradient(
+    135deg,
+    #f8f4ff,
+    #fff8f2
+  );
+
+  color: #243b64;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+  background: rgba(255, 255, 255, 0.95);
+
+  padding: 20px 7%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  box-shadow:
+    0 2px 15px rgba(0, 0, 0, 0.08);
+
+  position: sticky;
+  top: 0;
+
+  z-index: 10;
+}
+
+header h2 {
+  font-size: 24px;
+}
+
+nav a {
+  text-decoration: none;
+
+  color: #243b64;
+
+  margin-left: 25px;
+
+  font-weight: 600;
+
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #6c63c9;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+  min-height: 80vh;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+
+  padding: 50px 20px;
+}
+
+.hero h1 {
+  font-size: 52px;
+
+  color: #284b7a;
+
+  margin-bottom: 20px;
+}
+
+.hero p {
+  max-width: 650px;
+
+  font-size: 18px;
+
+  line-height: 1.8;
+}
+
+
+/* =========================
+   HOME BUTTON
+========================= */
+
+.home-buttons {
+  display: flex;
+
+  gap: 15px;
+
+  margin-top: 30px;
+
+  flex-wrap: wrap;
+
+  justify-content: center;
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+.button {
+  display: inline-block;
+
+  margin-top: 20px;
+
+  padding: 13px 25px;
+
+  background: #6c63c9;
+
+  color: white;
+
+  border-radius: 30px;
+
+  border: none;
+
+  text-decoration: none;
+
+  cursor: pointer;
+
+  font-size: 16px;
+
+  transition: 0.3s;
+}
+
+.button:hover {
+  transform: scale(1.05);
+
+  background: #5149a9;
+}
+
+
+/* =========================
+   CARD
+========================= */
+
+.card {
+  background: rgba(255, 255, 255, 0.95);
+
+  border-radius: 25px;
+
+  padding: 40px;
+
+  box-shadow:
+    0 10px 30px rgba(50, 70, 100, 0.12);
+}
+
+
+/* =========================
+   BIODATA
+========================= */
+
+.biodata-page {
+  width: 90%;
+
+  max-width: 700px;
+
+  margin: 60px auto;
+}
+
+.profile {
+  text-align: center;
+}
+
+.profile-img {
+  width: 170px;
+  height: 170px;
+
+  object-fit: cover;
+
+  border-radius: 50%;
+
+  border: 6px solid #d9d2ff;
+
+  margin-bottom: 20px;
+}
+
+.profile h1 {
+  font-size: 35px;
+
+  margin-bottom: 25px;
+
+  color: #284b7a;
+}
+
+.biodata {
+  text-align: left;
+}
+
+.biodata div {
+  padding: 14px 0;
+
+  border-bottom: 1px solid #eee;
+
+  line-height: 1.6;
+}
+
+.biodata strong {
+  display: inline-block;
+
+  width: 140px;
+}
+
+
+/* =========================
+   BIRTHDAY
+========================= */
+
+.birthday-page {
+  width: 90%;
+
+  max-width: 800px;
+
+  margin: 60px auto;
+}
+
+.birthday {
+  text-align: center;
+
+  overflow: hidden;
+}
+
+.birthday .emoji {
+  font-size: 70px;
+
+  animation: float 2s ease-in-out infinite;
+}
+
+.birthday h1 {
+  font-size: 45px;
+
+  color: #284b7a;
+
+  margin: 20px 0;
+}
+
+.birthday h3 {
+  font-size: 25px;
+
+  color: #d65b87;
+
+  margin-bottom: 25px;
+}
+
+.birthday p {
+  font-size: 17px;
+
+  line-height: 1.9;
+
+  margin-bottom: 15px;
+}
+
+.heart {
+  font-size: 35px;
+
+  margin: 25px 0;
+}
+
+
+/* =========================
+   LOVE ANIMATION
+========================= */
+
+.love {
+  position: fixed;
+
+  bottom: -50px;
+
+  z-index: 9999;
+
+  pointer-events: none;
+
+  animation:
+    loveMove
+    4s
+    ease-out
+    forwards;
+}
+
+@keyframes loveMove {
+
+  0% {
+    transform:
+      translateY(0)
+      rotate(0deg)
+      scale(0.5);
+
+    opacity: 0;
+  }
+
+  15% {
+    opacity: 1;
+  }
+
+  50% {
+    transform:
+      translateY(-50vh)
+      rotate(180deg)
+      scale(1.2);
+
+    opacity: 1;
+  }
+
+  100% {
+    transform:
+      translateY(-110vh)
+      rotate(360deg)
+      scale(0.7);
+
+    opacity: 0;
+  }
+}
+
+
+/* =========================
+   FLOAT CAKE
+========================= */
+
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-12px);
+  }
+
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+  text-align: center;
+
+  background: #ebe7ff;
+
+  padding: 25px;
+
+  color: #405579;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 800px) {
+
+  header {
+    flex-direction: column;
+
+    gap: 15px;
+  }
+
+  nav a {
+    margin: 0 8px;
+  }
+
+  .hero h1 {
+    font-size: 38px;
+  }
+
+  .birthday h1 {
+    font-size: 34px;
+  }
+
+  .biodata strong {
+    width: 110px;
+  }
+
+}

@@ -1,0 +1,143 @@
+
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Ucapan Ulang Tahun</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header>
+    <h2>🎂 Ucapan Ulang Tahun</h2>
+
+    <nav>
+      <a href="index.html">Beranda</a>
+      <a href="biodata.html">Biodata</a>
+      <a href="ucapan.html">Ucapan 🎂</a>
+    </nav>
+  </header>
+
+
+  <main class="birthday-page">
+
+    <section class="card birthday">
+
+      <div class="emoji">
+        🎂
+      </div>
+
+      <h1>
+        Selamat Ulang Tahun!
+      </h1>
+
+      <h3>
+        Untukmu, Orang Spesial 💕
+      </h3>
+
+
+      <p>
+        Hari ini adalah hari yang sangat spesial
+        karena seseorang yang luar biasa sedang
+        bertambah usia.
+      </p>
+
+      <p>
+        Semoga di umur yang baru ini,
+        semua impianmu perlahan menjadi kenyataan.
+      </p>
+
+      <p>
+        Semoga kamu selalu diberikan kesehatan,
+        kebahagiaan, kesuksesan, dan dikelilingi
+        oleh orang-orang yang tulus menyayangimu.
+      </p>
+
+      <p>
+        Jangan pernah berhenti bermimpi dan
+        jangan takut untuk mengejar apa yang
+        kamu inginkan.
+      </p>
+
+      <h2>
+        Selamat ulang tahun! 🎉🎈
+      </h2>
+
+
+      <div class="heart">
+        💖 💕 💗 💞 💖
+      </div>
+
+
+      <button class="button" onclick="loveEffect()">
+        Klik untuk kejutan 💖
+      </button>
+
+    </section>
+
+  </main>
+
+
+  <footer>
+    ❤️ Semoga harimu penuh kebahagiaan ❤️
+  </footer>
+
+
+  <script>
+
+    function loveEffect() {
+
+      const hearts = [
+        "❤️",
+        "💕",
+        "💖",
+        "💗",
+        "💓",
+        "💞",
+        "💘"
+      ];
+
+      for (let i = 0; i < 40; i++) {
+
+        const love = document.createElement("span");
+
+        love.classList.add("love");
+
+        love.innerHTML =
+          hearts[
+            Math.floor(
+              Math.random() * hearts.length
+            )
+          ];
+
+        love.style.left =
+          Math.random() * 100 + "vw";
+
+        love.style.fontSize =
+          (20 + Math.random() * 35) + "px";
+
+        love.style.animationDuration =
+          (3 + Math.random() * 3) + "s";
+
+        love.style.animationDelay =
+          Math.random() * 0.8 + "s";
+
+        document.body.appendChild(love);
+
+        setTimeout(() => {
+          love.remove();
+        }, 6500);
+
+      }
+
+    }
+
+  </script>
+
+</body>
+</html>
